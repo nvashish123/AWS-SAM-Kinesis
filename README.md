@@ -11,7 +11,7 @@ Steps -
 
 ``sam package --template-file sam.yaml --s3-bucket <YOUR_BUCKET_NAME> --output-template-file packaged.yaml``
 
-The above command will generate a new file named packaged.yaml in your working directory. This is the Cloudformation script which will create various resources in your environment in the next step.
+The above command will generate a new file named packaged.yaml in your working directory. This is the Cloudformation script which will create Lambda function in your environment in the next step.
 
 5. Deploy Lambda function by running the following comamnd - 
 
@@ -32,4 +32,7 @@ The above command will generate a new file named packaged.yaml in your working d
 11. The Lambda function simply polls the Kinesis Stream and prints it to the logs.
 
 12. Verify the same by going to the CloudWatch logs console.
+
+
+We used AWS SAM to deploy the Lambda function from the command line. AWS SAM is a great tool to define your serverless applications in simple and clean syntax. more details on SAM - https://github.com/awslabs/serverless-application-model 
 
