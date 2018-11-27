@@ -5,7 +5,7 @@ Steps
 -----------------
 
 1. Log into your AWS account and create an AWS Cloud9 environment by going to Cloud9 dashboard
-2. Make a directory `` mkdir buildersession `` and cd into it
+2. Open your IDE environment and in the terminal window, make a directory `` mkdir buildersession `` and cd into it
 3. Create new Amazon S3 bucket or use an existing bucket ``aws s3 mb s3://<YOUR_BUCKET_NAME ``
 4. Package AWS Lambda deployable zip by running the following command in the terminal window of you Cloud9 IDE - 
 
@@ -21,7 +21,7 @@ The above command will generate a new file named packaged.yaml in your working d
 
 7. Verify that the AWS Lambda function has been created by the AWS Cloudformation, with Amazon Kinesis Stream as trigger.
 
-8. Create Aamazon Kinesis Data Generator utility in your account by running the following AWS Cloudformation template - https://awslabs.github.io/amazon-kinesis-data-generator/web/help.html#template 
+8. Create Amazon Kinesis Data Generator utility in your account by running the following AWS Cloudformation template - https://awslabs.github.io/amazon-kinesis-data-generator/web/help.html#template 
 
 9. Log into the Amazon Kinesis data generator by going to the URL printed in the output section of the above AWS Cloudformation execution in step 8.
 
