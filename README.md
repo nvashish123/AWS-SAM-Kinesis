@@ -1,9 +1,9 @@
 # Builders Session - 
 
-**Hands-on: 1**
+Hands-on- 1
+-----------------
 
-1. Creating Lambda Function with Kinesis Stream as event trigger using SAM
-AWS SAM template to create Lambda function with Kinesis Stream trigger
+Using AWS SAM template to create AWS Lambda function with Amazon Kinesis Stream trigger
 
 Steps
 -----------------
@@ -49,6 +49,7 @@ More details on SAM can be found here- https://github.com/awslabs/serverless-app
 Hands-on- 2
 -----------------
 
+Using Amazon Kinesis Analytics to perform realtime Anomaly detection on streaming data.
 Please download the instructions here - 
 
 https://s3-us-west-2.amazonaws.com/vashi-test-bucket/reInvent-18-Analytics-Demo.docx
