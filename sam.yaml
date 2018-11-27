@@ -6,7 +6,7 @@ Resources:
     Properties:
       Handler: index.handler
       Runtime: nodejs8.10
-      Policies: lambda_basic_execution
+      Policies: AWSLambdaKinesisExecutionRole
       Events:
         Stream:
           Type: Kinesis
