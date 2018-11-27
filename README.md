@@ -1,7 +1,6 @@
 # Builders Session - 
 
-1. Hands-on: 1
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Hands-on: 1**
 
 1. Creating Lambda Function with Kinesis Stream as event trigger using SAM
 AWS SAM template to create Lambda function with Kinesis Stream trigger
