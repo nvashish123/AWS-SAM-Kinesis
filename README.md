@@ -6,7 +6,7 @@ Steps -
 
 1. Create Cloud9 environment
 2. Make a directory `` mkdir buildersession `` and cd into it
-3. Create new S3 bucket or use an existing bucket
+3. Create new S3 bucket or use an existing bucket ``aws s3 mb s3://<YOUR_BUCKET_NAME ``
 4. Package Lambda deployable zip by running the command - 
 
 ``sam package --template-file sam.yaml --s3-bucket <YOUR_BUCKET_NAME> --output-template-file packaged.yaml``
