@@ -4,7 +4,7 @@ AWS SAM template to create Lambda function with Kinesis Stream trigger
 Steps
 -----------------
 
-1. Create AWS Cloud9 environment
+1. Log into your AWS account and create an AWS Cloud9 environment by going to Cloud9 dashboard
 2. Make a directory `` mkdir buildersession `` and cd into it
 3. Create new Amazon S3 bucket or use an existing bucket ``aws s3 mb s3://<YOUR_BUCKET_NAME ``
 4. Package AWS Lambda deployable zip by running the following command in the terminal window of you Cloud9 IDE - 
