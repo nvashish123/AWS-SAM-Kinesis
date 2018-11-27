@@ -1,4 +1,6 @@
-# Builders Session - Creating Lambda Function with Kinesis Stream as event trigger using SAM
+# Builders Session - 
+
+Hands-on 1 : Creating Lambda Function with Kinesis Stream as event trigger using SAM
 AWS SAM template to create Lambda function with Kinesis Stream trigger
 
 Steps
@@ -41,4 +43,11 @@ Conclusion
 We used AWS Serverless Application Model (SAM) to deploy the AWS Lambda function from the command line, with Amazon Kinesis Staream as an event source. We then used Amazon Kinesis Data Generator to pump some artificial data into our Amazon Kinesis Stream and saw it getting processed by the AWS Lambda function. AWS SAM is a great tool to define your serverless applications in simple and clean syntax. You can build your serverless application in the similar manner with many more event sources configured with your AWS Lambda function using AWS SAM.
 
 More details on SAM can be found here- https://github.com/awslabs/serverless-application-model 
+
+Hands-on- 2
+-----------------
+
+Please download the instructions here - 
+
+https://s3-us-west-2.amazonaws.com/vashi-test-bucket/reInvent-18-Analytics-Demo.docx
 
