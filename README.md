@@ -1,38 +1,43 @@
 # AWS-SAM-Kinesis
 AWS SAM template to create Lambda function with Kinesis Stream trigger
 
-Steps - 
+Steps
 -----------------
 
-1. Create Cloud9 environment
+1. Create AWS Cloud9 environment
 2. Make a directory `` mkdir buildersession `` and cd into it
-3. Create new S3 bucket or use an existing bucket ``aws s3 mb s3://<YOUR_BUCKET_NAME ``
-4. Package Lambda deployable zip by running the command - 
+3. Create new Amazon S3 bucket or use an existing bucket ``aws s3 mb s3://<YOUR_BUCKET_NAME ``
+4. Package AWS Lambda deployable zip by running the following command in the terminal window of you Cloud9 IDE - 
 
 ``sam package --template-file sam.yaml --s3-bucket <YOUR_BUCKET_NAME> --output-template-file packaged.yaml``
 
-The above command will generate a new file named packaged.yaml in your working directory. This is the Cloudformation script which will create Lambda function in your environment in the next step.
+The above command will generate a new file named packaged.yaml in your working directory. This is the AWS Cloudformation script which will create AWS Lambda function in your environment in the next step.
 
-5. Deploy Lambda function by running the following comamnd - 
+5. Deploy AWS Lambda function by running the following comamnd - 
 
 ``sam deploy --template-file /home/ec2-user/environment/buildersession/packaged.yaml --stack-name reInventBuilderSessionStack --capabilities CAPABILITY_IAM``
 
-6. Check the progress on the Cloudformation by going to the Cloudformation console in your AWS account.
+6. Check the progress on the AWS Cloudformation by going to the AWS Cloudformation console in your AWS account.
 
-7. Verify that the Lambda function has been created by the Cloudformation, with Kinesis Stream as trigger.
+7. Verify that the AWS Lambda function has been created by the AWS Cloudformation, with Amazon Kinesis Stream as trigger.
 
-8. Create Kinesis Data Generator utility in your account by running the following Cloudformation template - https://awslabs.github.io/amazon-kinesis-data-generator/web/help.html#template 
+8. Create Aamazon Kinesis Data Generator utility in your account by running the following AWS Cloudformation template - https://awslabs.github.io/amazon-kinesis-data-generator/web/help.html#template 
 
-9. Log into the kinesis data generator by going to the URL printed in the output section of the above Cloudformation execution in step 8.
+9. Log into the Amazon Kinesis data generator by going to the URL printed in the output section of the above AWS Cloudformation execution in step 8.
 
-10. Select the AWS region and Kinesis Stream we just created from the drop down and start sending some data to the kinesis Stream. Sample apache access logs event record - 
+10. Select the AWS region and Amazon Kinesis Stream we just created from the drop down and start sending some data to the Amazon Kinesis Stream. Sample apache access logs event record - 
 
 ``{{internet.ip}} - - [{{date.now("DD/MMM/YYYY:HH:mm:ss ZZ")}}] "GET /index.html HTTP/1.1" 200 104 "-" "ELB-HealthChecker/1.0" ``
 
-11. The Lambda function simply polls the Kinesis Stream and prints it to the logs.
+11. The AWS Lambda function simply polls the Amazon Kinesis Stream and prints it to the logs.
 
-12. Verify the same by going to the CloudWatch logs console.
+12. Verify the same by going to the Amazon CloudWatch logs console.
 
 
-We used AWS SAM to deploy the Lambda function from the command line. AWS SAM is a great tool to define your serverless applications in simple and clean syntax. more details on SAM - https://github.com/awslabs/serverless-application-model 
+Conclusion
+-----------------
+
+We used AWS Serverless Application Model (SAM) to deploy the AWS Lambda function from the command line, with Amazon Kinesis Staream as an event source. We then used Amazon Kinesis Data Generator to pump some artificial data into our Amazon Kinesis Stream and saw it getting processed by the AWS Lambda function. AWS SAM is a great tool to define your serverless applications in simple and clean syntax. You can build your serverless application in the similar manner with many more event sources configured with your AWS Lambda function using AWS SAM.
+
+More details on SAM can be found here- https://github.com/awslabs/serverless-application-model 
 
