@@ -11,7 +11,7 @@ Steps
 1. Log into your AWS account and create an AWS Cloud9 environment by going to Cloud9 dashboard
 2. Open your IDE environment and in the terminal window, make a directory `` mkdir buildersession `` and cd into it
 3. Git clone or manually create sam.yaml and index.js files from this repository
-4. Create a new Amazon S3 bucket ``aws s3 mb s3://<YOUR_BUCKET_NAME ``
+4. Create a new Amazon S3 bucket ``aws s3 mb s3://<YOUR_BUCKET_NAME> ``
 5. Package AWS Lambda deployable zip by running the following command in the terminal window of you Cloud9 IDE - 
 
 ``sam package --template-file sam.yaml --s3-bucket <YOUR_BUCKET_NAME> --output-template-file packaged.yaml``
