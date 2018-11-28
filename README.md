@@ -54,3 +54,4 @@ Please download the instructions here -
 
 https://s3-us-west-2.amazonaws.com/vashi-test-bucket/reInvent-18-Analytics-Demo.docx
 
+![Logo](Kinesis-Analytics.png)
